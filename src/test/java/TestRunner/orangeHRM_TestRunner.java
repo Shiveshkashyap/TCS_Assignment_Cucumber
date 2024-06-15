@@ -6,13 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "C://Users//SHIVESH//IdeaProjects//CucumberFramework//Features//OrangeHRM.feature",glue = "StepDefinitions")// giving the location of feature and step definition file
-
-
-
-
-
-
+        features = "C://Users//SHIVESH//IdeaProjects//TCS_CucumberAssignment//Features//OrangeHRM.feature",glue = "OrangeHRM_StepDef")// giving the location of feature and step definition file
 
 
 

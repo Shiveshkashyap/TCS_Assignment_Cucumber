@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class LoginPage {
     WebDriver driver;
     public LoginPage(WebDriver rDriver){
@@ -20,10 +22,6 @@ public class LoginPage {
 
     @FindBy(xpath = "//button[@type='submit']")
     WebElement SubmitButton;
-
-//    @FindBy(linkText = "Logout")
-//    WebElement LogoutButton;
-
     public void setUserName(String UserName){
         txtUserName.clear();
         txtUserName.sendKeys(UserName);
@@ -34,5 +32,6 @@ public class LoginPage {
     }
     public void ClickOnLogin(){
         SubmitButton.click();
+        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
     }
 }
